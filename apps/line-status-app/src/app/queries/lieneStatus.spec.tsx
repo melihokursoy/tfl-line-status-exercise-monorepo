@@ -37,7 +37,7 @@ describe('useLineStatusQuery', () => {
     await waitForNextUpdate(); // Wait for hook to fetch data
 
     expect(mockUseFetchWithTflCredentials).toHaveBeenCalledWith({
-      url: 'http://api.tfl.gov.uk/Line/Mode/Tube/Status',
+      url: 'https://api.tfl.gov.uk/Line/Mode/Tube/Status',
       fetchOptions: { method: 'GET' },
     });
 

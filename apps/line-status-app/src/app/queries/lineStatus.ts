@@ -10,7 +10,7 @@ export const useLineStatusQuery = () => useQuery<LineStatusApiresponseItem[]>({
 
 const LineStatusFetcher = async () => {
     const res = await useFetchWithTflCredentials({
-        url: "http://api.tfl.gov.uk/Line/Mode/Tube/Status",
+        url: "https://api.tfl.gov.uk/Line/Mode/Tube/Status",
         fetchOptions: {
             method: 'GET'
         }
