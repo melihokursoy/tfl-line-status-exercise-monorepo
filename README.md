@@ -65,7 +65,8 @@ npx nx run line-status-app-e2e:open-cypress
 
 ## Assumptions
 
-introduced 3 column option for laptops 
+- status is presented as a coma separated values of the lineStatusees array in the response.
+- introduced 3 column option for laptops 
 
 
 
