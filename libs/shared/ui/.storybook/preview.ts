@@ -19,7 +19,7 @@ viewport: {
             name: 'mobile',
             styles: {
               width: '425px',
-              height: '480px',
+              height: '768px',
             },
           },   },
     defaultViewport: 'laptop'

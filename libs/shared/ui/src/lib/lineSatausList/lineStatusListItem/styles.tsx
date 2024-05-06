@@ -8,6 +8,11 @@ export const StyledLi = styled.li<{lineId?:string}>`
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  transition: transform .15s;
+  &:hover {
+    box-shadow: 0 0 10pt 0.5pt #D3D3D3;
+    transform: scale(1.01);
+  }
   & span {
     display: block;
     max-width: 50%;

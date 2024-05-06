@@ -13,7 +13,7 @@ create or update `apps/line-status-app/.env` file as seen below
 
 ```
 NX_TFL_APP_ID="YOUR_APP_ID"
-NX_TFL_API_KEY="YOUR_API_KEY"
+NX_TFL_APP_KEY="YOUR_APP_KEY"
 ...
 ```
 
@@ -22,7 +22,7 @@ NX_TFL_API_KEY="YOUR_API_KEY"
 
 Install dependencies with `npm i`
 
-Run `npx nx serve line-status-app` to start the development server. Happy coding!
+Run `npx nx serve line-status-app` to start the development server on http://localhost:4200
 
 ## How to build for production
 
@@ -63,8 +63,9 @@ npx nx run line-status-app-e2e:open-cypress
 ```
 
 
-
 ## Assumptions
+
+introduced 3 column option for laptops 
 
 
 

@@ -38,6 +38,7 @@ export const GlobalStyles = createGlobalStyle`
     url("https://db.onlinewebfonts.com/t/6f9f13ce8ac6971d7c1c21ca9189f7d0.svg#Johnston100 W03 Regular")format("svg");
 }
 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,5 +49,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Johnston100 W03 Regular", Arial, sans-serif;
   }
 
-
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 `;
