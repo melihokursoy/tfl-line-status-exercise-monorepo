@@ -35,6 +35,8 @@ You can check UI Library with:
 ```
 npx nx run ui:storybook --port 6006
 ```
+or visit ithub pages at 
+https://melihokursoy.github.io/tfl-line-status-exercise-monorepo/?path=/story/line-status-list--default
 
 You can run ui library tests:
 
