@@ -2,7 +2,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useLineStatusQuery } from './lineStatus';
 import { useFetchWithTflCredentials } from '../hooks/useFetchWithTflCredentials';
 import { QueryClientWrapper } from '../components/queryClientWrapper';
-import mockApiResponse from '../../mocks/apiResponse.json'
+import mockApiResponse from '../../mocks/apiResponse.json';
 
 const customWrapper = ({ children }) => (
   <QueryClientWrapper>{children}</QueryClientWrapper>
@@ -14,7 +14,6 @@ jest.mock('../hooks/useFetchWithTflCredentials', () => ({
 
 describe('useLineStatusQuery', () => {
   it('fetches line status data', async () => {
-
     const mockUseFetchWithTflCredentials =
       useFetchWithTflCredentials as jest.MockedFunction<
         typeof useFetchWithTflCredentials
@@ -42,5 +41,4 @@ describe('useLineStatusQuery', () => {
     expect(result.current.isLoading).toBe(false); // Loading state after data fetch
     expect(result.current.error).toBeNull(); // No error occurred
   });
-
 });

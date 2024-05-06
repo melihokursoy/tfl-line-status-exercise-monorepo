@@ -16,7 +16,7 @@ export const LineStatusList: React.FC<LineStatusListtProps> = ({
 }) => {
   return (
     <>
-      <StyledH1 role="heading">{title}</StyledH1>
+      <StyledH1 role="heading" aria-level={1}>{title}</StyledH1>
       <StyledUl role="list" data-testid="line-status-list">
         {items?.map((line,i) => (
           <LineStatusListItem key={`list-item-for-${line.lineId}`}  tabindex={`${i}`} {...line} />
