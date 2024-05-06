@@ -20,13 +20,22 @@ NX_TFL_APP_KEY="YOUR_APP_KEY"
 
 ## How to start the application
 
-Install dependencies with `npm i`
+Install dependencies with 
+```
+npm i
+```
 
-Run `npx nx serve line-status-app` to start the development server on http://localhost:4200
+To start the development server on http://localhost:4200 run
+```
+npx nx serve line-status-app
+```
 
 ## How to build for production
 
-Run `npx nx build line-status-app` to build the application. The build artifacts are stored in the output directory (e.g. `dist/app/line-status-app`), ready to be deployed.
+To build the application. The build artifacts are stored in the output directory (e.g. `dist/app/line-status-app`), ready to be deployed run
+```
+npx nx build line-status-app
+```
 
 ## UI Library 
 
@@ -35,7 +44,7 @@ You can check UI Library with:
 ```
 npx nx run ui:storybook --port 6006
 ```
-or visit ithub pages at 
+or visit github pages at 
 https://melihokursoy.github.io/tfl-line-status-exercise-monorepo/?path=/story/line-status-list--default
 
 You can run ui library tests:
