@@ -1,4 +1,4 @@
-import { getH1, getUl } from '../support/app.po';
+import { getH1, getUl, terminalLog } from '../support/app.po';
 import 'cypress-axe'
 
 describe('line-status-app-e2e', () => {
@@ -26,10 +26,17 @@ describe('line-status-app-e2e', () => {
     cy.checkA11y(null, {
       runOnly: {
         type: 'tag',
-        values: ['wcag2aa']
+        values: [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21a",
+          "wcag21aa",
+          "wcag22aa",
+          "best-practice",
+        ]
       },
       includedImpacts: ['critical']
-    })
+    }, terminalLog)
   })
 
 });
