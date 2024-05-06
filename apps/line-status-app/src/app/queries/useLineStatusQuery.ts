@@ -5,7 +5,8 @@ import { LineStatusApiresponseItem } from "../types/lineStatusApiresponseItem";
 export const useLineStatusQuery = () => useQuery<LineStatusApiresponseItem[]>({
     queryKey: ['lineStatus'],
     queryFn: LineStatusFetcher,
-    refetchInterval: 30000
+    staleTime: 30000,
+    refetchInterval: 60000
 })
 
 const LineStatusFetcher = async () => {

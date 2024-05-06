@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks';
-import { useLineStatusQuery } from './lineStatus';
+import { useLineStatusQuery } from './useLineStatusQuery';
 import { useFetchWithTflCredentials } from '../hooks/useFetchWithTflCredentials';
 import { QueryClientWrapper } from '../components/queryClientWrapper';
 import apiResponseMock from '../../mocks/apiResponse.json';
