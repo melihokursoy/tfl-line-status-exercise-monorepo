@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledOverlay = styled.div`
+export const StyledOverlay = styled.div<{loading:boolean}>`
   position: fixed;
   top: 0;
   left: 0;
@@ -12,6 +12,9 @@ export const StyledOverlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: ${(props) => props.loading ? 'visible':'hidden'};
+  opacity: ${(props) => props.loading ? 1:0};
+  transition: visibility 1s, opacity 0.5s ease;
 `;
 
 export const StyledSpinner = styled.div`

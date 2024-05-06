@@ -6,7 +6,7 @@ import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 const meta: Meta<typeof LineStatusList> = {
-  title: "Line Status List",
+  title: 'Line Status List',
   component: LineStatusList,
   decorators: [
     (Story) => (
@@ -54,7 +54,7 @@ export const Default = {
       },
     ],
   },
-  play: async ({ canvasElement }) => {
+  play: async ({canvasElement}:{canvasElement:HTMLElement}) => {
     const canvas = within(canvasElement);
     expect(canvas.getByText(/Status Updates/gi)).toBeTruthy();
     expect(canvas.getByText(/Bakerloo/gi)).toBeTruthy();

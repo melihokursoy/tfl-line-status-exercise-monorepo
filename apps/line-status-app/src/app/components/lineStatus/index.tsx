@@ -7,7 +7,7 @@ import { useMemo } from 'react';
 import { LineStatus as LineStatusType, LineStatusApiresponseItem } from '../../types/lineStatusApiresponseItem';
 
 export const LineStatus: React.FC = () => {
-  const { isPending, isError, data, error } = useLineStatusQuery();
+  const { isFetching, isError, data, error } = useLineStatusQuery();
 
   const flattenedData = useMemo(
     () =>
@@ -25,7 +25,7 @@ export const LineStatus: React.FC = () => {
 
   return (
     <>
-      <LoadingSpinner loading={isPending} />
+      <LoadingSpinner loading={isFetching} />
       <LineStatusList items={flattenedData} />
       {isError ? (
         <div>

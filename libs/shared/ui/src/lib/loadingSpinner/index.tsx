@@ -11,9 +11,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   loading = false,
 }) => {
   return  createPortal(
-    loading ? <StyledOverlay>
+    <StyledOverlay loading={loading}>
       <StyledSpinner data-testid="loading-spinner"/>
-    </StyledOverlay>: null,
+    </StyledOverlay>,
     document.body
   ) 
 };
