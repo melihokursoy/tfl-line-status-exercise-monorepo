@@ -10,7 +10,8 @@ export const StyledUl = styled.ul`
   grid-gap: 0px 16px;
 
   @media screen and (min-width: ${(props) => props.theme.breakpoints.laptop}) {
-    grid-template-columns: repeat(3, calc(100% / 3 - 32px / 3));
+    grid-template-columns: repeat(2, calc(100% / 2 - 16px / 2));
+    // grid-template-columns: repeat(3, calc(100% / 3 - 32px / 3));
 }
 
   @media screen and (max-width:  ${(props) => props.theme.breakpoints.tablet}) {

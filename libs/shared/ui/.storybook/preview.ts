@@ -4,7 +4,7 @@ viewport: {
         laptop: {
             name: 'laptop',
             styles: {
-              width: '1200px',
+              width: '1440px',
               height: '1024px',
             },
           },  
@@ -23,5 +23,10 @@ viewport: {
             },
           },   },
     defaultViewport: 'laptop'
+  },
+  backgrounds: {
+    default: 'Light',
+    values: [
+      { name: 'Light', value: '#ffffff' }    ],
   }
 }

@@ -8,5 +8,7 @@ export const Wrapper = styled.main`
   min-height: 100vh;
   min-height: 100dvh;
   min-width: 320px;
+  max-width: 1200px;
+  margin: auto;
   padding: 32px
 `;

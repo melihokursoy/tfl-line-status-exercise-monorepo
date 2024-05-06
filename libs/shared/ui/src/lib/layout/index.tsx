@@ -10,7 +10,7 @@ export interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-        <GlobalStyles/>
+      <GlobalStyles />
       <Wrapper>{children}</Wrapper>
     </ThemeProvider>
   );

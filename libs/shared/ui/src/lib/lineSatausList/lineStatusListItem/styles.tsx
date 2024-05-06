@@ -4,7 +4,7 @@ export const StyledLi = styled.li<{lineId?:string}>`
   list-style-type: none;
   padding: 0;
   border: 1px solid ${(props) => props.theme.colors['lightgrey']};
-  border-left: 10px solid ${(props) => props.theme.colors.lines[props.lineId || 'default']};
+  border-left: 16px solid ${(props) => props.theme.colors.lines[props.lineId || 'default']};
   padding: 1rem;
   display: flex;
   justify-content: space-between;
