@@ -28,6 +28,7 @@
     "@nx/workspace": "18.3.4",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@rollup/plugin-url": "^7.0.0",
+    "@storybook/addon-a11y": "^7.6.19",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/core-server": "^7.5.3",

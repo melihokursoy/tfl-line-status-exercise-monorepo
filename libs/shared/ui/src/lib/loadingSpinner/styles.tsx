@@ -7,14 +7,14 @@ export const StyledOverlay = styled.div<{loading:boolean}>`
   width: 100vw;
   width: 100dvw;
   height: 100vh;
-  min-height: 100vh;
+  height: 100dvh;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: visibility 1s, opacity 0.5s ease;
   visibility: ${(props) => props.loading ? 'visible':'hidden'};
   opacity: ${(props) => props.loading ? 1:0};
-  transition: visibility 1s, opacity 0.5s ease;
 `;
 
 export const StyledSpinner = styled.div`
