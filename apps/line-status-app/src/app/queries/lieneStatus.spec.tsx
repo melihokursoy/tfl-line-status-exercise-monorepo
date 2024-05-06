@@ -2,10 +2,14 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useLineStatusQuery } from './lineStatus';
 import { useFetchWithTflCredentials } from '../hooks/useFetchWithTflCredentials';
 import { QueryClientWrapper } from '../components/queryClientWrapper';
-import mockApiResponse from '../../mocks/apiResponse.json';
+import apiResponseMock from '../../mocks/apiResponse.json';
+import { Layout } from '@tfl-line-status-excersise-monorepo/ui';
+import { ReactNode } from 'react';
 
-const customWrapper = ({ children }) => (
-  <QueryClientWrapper>{children}</QueryClientWrapper>
+const customWrapper = ({ children }: { children: ReactNode }) => (
+  <QueryClientWrapper>
+    <Layout>{children}</Layout>
+  </QueryClientWrapper>
 );
 
 jest.mock('../hooks/useFetchWithTflCredentials', () => ({
@@ -18,8 +22,9 @@ describe('useLineStatusQuery', () => {
       useFetchWithTflCredentials as jest.MockedFunction<
         typeof useFetchWithTflCredentials
       >;
+    // @ts-ignore
     mockUseFetchWithTflCredentials.mockResolvedValueOnce({
-      json: jest.fn().mockResolvedValueOnce(mockApiResponse),
+      json: jest.fn().mockResolvedValueOnce(apiResponseMock),
     });
 
     const { result, waitForNextUpdate } = renderHook(
@@ -36,7 +41,7 @@ describe('useLineStatusQuery', () => {
       fetchOptions: { method: 'GET' },
     });
 
-    expect(result.current.data).toEqual(mockApiResponse); // Check if data is fetched and set
+    expect(result.current.data).toEqual(apiResponseMock); // Check if data is fetched and set
 
     expect(result.current.isLoading).toBe(false); // Loading state after data fetch
     expect(result.current.error).toBeNull(); // No error occurred

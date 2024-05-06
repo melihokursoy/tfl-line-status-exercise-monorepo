@@ -1,6 +1,6 @@
 // LineStatus.test.js
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 import '@testing-library/jest-dom';
 import { render, waitFor } from '@testing-library/react';
 import { LineStatus } from '.';
@@ -8,20 +8,18 @@ import { Layout } from '@tfl-line-status-excersise-monorepo/ui';
 import apiResponseMock from '../../../mocks/apiResponse.json';
 import { QueryClientWrapper } from '../queryClientWrapper';
 
-const customWrapper = ({ children }) => (
+const customWrapper = ({ children }: { children: ReactNode }) => (
   <QueryClientWrapper>
     <Layout>{children}</Layout>
   </QueryClientWrapper>
 );
 
 // Mock the fetch API
-global.fetch = jest.fn();
-
-beforeEach(() => {
-  global.fetch.mockResolvedValue({
-    json: async () => apiResponseMock,
-  });
-});
+global.fetch = jest.fn(() =>
+  Promise.resolve({
+    json: () => Promise.resolve(apiResponseMock),
+  }),
+) as jest.Mock;
 
 afterEach(() => {
   jest.clearAllMocks();
