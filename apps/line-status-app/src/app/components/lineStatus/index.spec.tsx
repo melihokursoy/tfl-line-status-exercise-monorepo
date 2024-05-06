@@ -32,12 +32,12 @@ describe('LineStatus Component', () => {
     });
 
     await waitFor(
-      () => expect(queryByTestId('loading-spinner')).toBeInTheDocument(),
+      () => expect(queryByTestId('loading-spinner')).toBeVisible(),
       { timeout: 2000 }
     );
 
     await waitFor(
-      () => expect(queryByTestId('loading-spinner')).not.toBeInTheDocument(),
+      () => expect(queryByTestId('loading-spinner')).not.toBeVisible(),
       { timeout: 2000 }
     );
   });
