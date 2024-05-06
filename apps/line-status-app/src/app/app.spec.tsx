@@ -7,13 +7,16 @@ import apiResponseMock from '../mocks/apiResponse.json';
 global.fetch = jest.fn();
 
 beforeEach(() => {
-    global.fetch.mockResolvedValue({
-        json: async () => apiResponseMock,
-    });
+  // Mock the fetch API
+  global.fetch = jest.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve(apiResponseMock),
+    })
+  ) as jest.Mock;
 });
 
 afterEach(() => {
-    jest.clearAllMocks(); 
+  jest.clearAllMocks();
 });
 
 describe('App', () => {

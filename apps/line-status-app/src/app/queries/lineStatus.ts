@@ -1,7 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useFetchWithTflCredentials } from "../hooks/useFetchWithTflCredentials";
+import { LineStatusApiresponseItem } from "../types/lineStatusApiresponseItem";
 
-export const useLineStatusQuery = () => useQuery({
+export const useLineStatusQuery = () => useQuery<LineStatusApiresponseItem[]>({
     queryKey: ['lineStatus'],
     queryFn: LineStatusFetcher,
     enabled:true,

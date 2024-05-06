@@ -63,10 +63,16 @@ npx nx run line-status-app-e2e:open-cypress
 ```
 
 
-## Assumptions
+## Assumptions & Related Information
 
 - status is presented as a coma separated values of the lineStatusees array in the response.
 - introduced 3 column option for laptops 
+- used cypress-axe for automated accesibikity testing
+- used react query for state management
+- used quicktype to generate ts type 
+    ```
+    quicktype apps/line-status-app/src/mocks/apiResponse.json -o apps/line-status-app/src/app/types/lineStatusApiresponseItem.ts
+    ```
 
 
 

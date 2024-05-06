@@ -4,6 +4,7 @@ import {
 } from '@tfl-line-status-excersise-monorepo/ui';
 import { useLineStatusQuery } from '../../queries/lineStatus';
 import { useMemo } from 'react';
+import { LineStatusApiresponseItem } from '../../types/lineStatusApiresponseItem';
 
 export const LineStatus: React.FC = () => {
   const { isPending, isError, data, error } = useLineStatusQuery();
@@ -11,7 +12,7 @@ export const LineStatus: React.FC = () => {
   const flattenedData = useMemo(
     () =>
       data
-        ? data?.map((l: any) => ({
+        ? data?.map((l: LineStatusApiresponseItem) => ({
             lineId: l.id,
             name: l.name,
             status: l.lineStatuses
